@@ -1,13 +1,9 @@
 import functools
-import time
 
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
 
 
 def execute_webdriver_task(_func=None, *, headless=False):
@@ -37,18 +33,3 @@ def execute_webdriver_task(_func=None, *, headless=False):
         return add_params_func
     else:
         return add_params_func(_func)
-
-
-@execute_webdriver_task(headless=True)
-def test_func(wd):
-    print('It works!')
-    wd.get('https://google.com')
-    time.sleep(3)
-
-def main():
-    test_func()
-
-if __name__ == '__main__':
-    main()
-
-
