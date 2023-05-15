@@ -1,3 +1,5 @@
-local-resources/
+resources/
 .venv/
+.vscode/
+**/__pycache__
 /venv/
