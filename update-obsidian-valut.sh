@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/KnowledgeBase/obsidian-vault || exit
+cd ~/obsidian-vault || exit
 
 
 if git status --porcelain | grep -q '^[ MADRCU?]'; then
