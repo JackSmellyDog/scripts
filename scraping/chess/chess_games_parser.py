@@ -2,11 +2,12 @@ import time
 import json
 from dataclasses import dataclass
 
-from common.webdriverutil import execute_webdriver_task
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chromium.webdriver import RemoteWebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+from scraping.core.scraping_core import execute_webdriver_task
 
 BASE_URL = 'https://www.chess.com'
 LOGIN_URL = BASE_URL + '/login'
